@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Tool box</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="./css/style.css" />
+    <link href="https://fonts.googleapis.com/css?family=Merriweather" rel="stylesheet">
+    
+</head>
+
+<body style="width: 100%; height: 100%;">
+    <header>
+        <div class="titulo">
+            Tool box
+        </div>
+    </header>    
+    <section style="width: 100%; height: 100%;" class="conteudo"id="app">                
+        <box v-bind:data="hospedagem"></box>  
+        <box v-bind:data="email"></box> 
+        <box v-bind:data="dominio"></box>        
+        <box v-bind:data="cloud"></box> 
+    </section>
+    
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src="./js/main.js"></script>
+</body>
+</html>
+
+
+
+<!--
+    <div class="row">
+            <div class="box shadow">
+                <div class="subtitulo label">
+                    Migração de e-mail
+                </div>
+                <div class="contedoBox">
+                    <span class="texto">
+                        Para solicitar a migração de e-mail na Redehos selecione o de onde deseja migrar 
+                        {{message}}
+                    </span>
+                </div>
+            
+                <button class="button label  ">RedeHost para RedeHost</button>
+                <button class="button label  ">Outro provedor para RedeHost</button>
+            
+        </div> 
+<div>
+    <label class="label subtitulo">Servidor de origem</label>
+</div>
+<div>
+    <label class="label">Servisor IMAP:</label>
+</div>
+<div>
+    <input type="text" class="form-control form-max" id="sourceHost">
+</div>
+<div>
+    <label class="label">Porta IMAP:</label>
+</div>
+<div>
+    <input type="text" type="number" class="form-control form-med" id="sourcePort">
+</div>
+
+<div>
+    <label class="label">SSL:</label>
+</div>
+<div>
+    <input type="checkbox" class="form-control-checkbox" id="sourceSll">
+</div>
+    -->
