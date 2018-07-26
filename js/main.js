@@ -1,10 +1,10 @@
 Vue.component('listbox', { 
   props: ['site'],
     template: `
-    <a class="subbox" href="{{site.url}}" target=”_blank”>
+    <a class="subbox" :href="site.url" target=”_blank”>
         <div >
-            <p class="subboxtitulo"{{site.titulo}}</p>
-            <p class="{{site.desc}}</p>
+            <p class="subboxtitulo">{{site.titulo}}</p>
+            <p class="subboxdesc">{{site.desc}}</p>
         </div>
     </a>
   `
@@ -18,13 +18,13 @@ Vue.component('listbox', {
                   <div class="subtitulo label">
                         {{data.titulo}}
                   </div>
-                  <div class="contedoBox" v-for="site in data.sites">
-                      <listbox v-bind:site="site"> </listbox>
+                  <div class="contedoBox">
+                      <listbox 
+                      v-for="site in data.sites" 
+                      v-bind:site="site">
+                       </listbox>
                   </div>
-          
-              
-          
-          </div>     
+            </div>     
       </div>
     `
   });
@@ -36,61 +36,33 @@ Vue.component('listbox', {
         titulo:"Hospedagem",
         sites:[
           {
-            titulo:"Teste",
-            url: "www.google.com",
-            desc: "site de busca"
-          },
+            titulo:"Pingdom Website Speed Test",
+            url: "https://tools.pingdom.com/",
+            desc: "Analisar velocidade e recursos que o site consome."
+          }, 
           {
-            titulo:"Teste2",
-            url: "www.google.com",
-            desc: "site de busca"
+            titulo:"GTmetrix",
+            url: "https://gtmetrix.com/",
+            desc: "Analisar velocidade e recursos que o site consome."
+          }, 
+          {
+            titulo:"Google PageSpeed",
+            url: "https://developers.google.com/speed/pagespeed/insights/",
+            desc: "Analisar velocidade e recursos que o site consome."
           }
         ]
       },
       email:{
         titulo:"E-mail",
-        sites:[
-          {
-            titulo:"Teste",
-            url: "www.google.com",
-            desc: "site de busca"
-          },
-          {
-            titulo:"Teste2",
-            url: "www.google.com",
-            desc: "site de busca"
-          }
-        ]
+        sites:[]
       },
       dominio:{
         titulo:"Domínio",
-        sites:[
-          {
-            titulo:"Teste",
-            url: "www.google.com",
-            desc: "site de busca"
-          },
-          {
-            titulo:"Teste2",
-            url: "www.google.com",
-            desc: "site de busca"
-          }
-        ]
+        sites:[]
       },
       cloud:{
         titulo:"Cloud",
-        sites:[
-          {
-            titulo:"Teste",
-            url: "www.google.com",
-            desc: "site de busca"
-          },
-          {
-            titulo:"Teste2",
-            url: "www.google.com",
-            desc: "site de busca"
-          }
-        ]
+        sites:[]
       }
     }
   })
